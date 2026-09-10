@@ -1,39 +1,42 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+ ____   ____
+/ ___| / ___|
+\___ \| |  _ 
+ ___) | |_| |
+|____/ \____|
 
-The humans.txt file explains the team, technology,
-and graphic assets behind this site humanstxt.org.
-
-_______________________________________________________________________________
-
-DESIGNER | デザイナー
-
-Hamish Williams
-Hand crafted design & web development
-
-Design tools:
-Figma
-Photoshop
-Blender
-
-twitter.com/hamishmw
-github.com/hamishmw
+The humans.txt file explains the creator, technology,
+and engineering behind this site (humanstxt.org).
 
 _______________________________________________________________________________
 
-TECHNOLOGY | テクノロジー
+DEVELOPER & DESIGNER
 
-React
+Sanskriti Goswami
+Full Stack Software Developer & AI Engineer
+Electronics & Communication Engineering, AKGEC (2023–2027)
+
+GitHub: https://github.com/sanskritig007
+LinkedIn: https://www.linkedin.com/in/sanskriti-goswami-a5b901361/
+LeetCode: https://leetcode.com/sanskritig007
+
+_______________________________________________________________________________
+
+TECHNOLOGY STACK
+
+React 18
 Remix
-Three.js
+Three.js & GLSL Shaders
 Framer Motion
+FastAPI & Python
+PostgreSQL & MongoDB
+Vite & Vercel
 
 _______________________________________________________________________________
 
-FONTS | フォント
+TYPOGRAPHY & ASSETS
 
-Gotham
-IPA Gothic Regular
-Hiragino Kaku Gothic W8
+Gotham Book & Medium
+Modern Minimalist Sans
+Custom Vector SG Monogram Mark
+Procedural 3D WebGL Shaders
+
