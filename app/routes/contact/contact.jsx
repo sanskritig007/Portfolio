@@ -78,9 +78,9 @@ export async function action({ request }) {
 }
 
 export const Contact = () => {
-  const actionData = useActionData();
-  const { state } = useNavigation();
-  const sending = state === 'submitting';
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = async () => {
@@ -90,6 +90,37 @@ export const Contact = () => {
       setTimeout(() => setCopied(false), 2500);
     } catch {
       // Fallback
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSending(true);
+    setErrorMessage('');
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append('access_key', WEB3FORMS_KEY);
+    formData.append('from_name', `${formData.get('name')} (Portfolio Contact)`);
+    formData.append('subject', `New Portfolio Message from ${formData.get('name')}`);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSent(true);
+        form.reset();
+      } else {
+        setErrorMessage(data.message || 'Failed to send message. Please try again.');
+      }
+    } catch (err) {
+      setErrorMessage('Network error. Please try again or reach out directly at sanskritig007@gmail.com');
+    } finally {
+      setSending(false);
     }
   };
 
@@ -219,7 +250,7 @@ export const Contact = () => {
 
         {/* Right Column: Send a Direct Message Form */}
         <div className={styles.formCard}>
-          {actionData?.success ? (
+          {sent ? (
             <div className={styles.completeCard}>
               <div className={styles.cardIconBox} style={{ width: '60px', height: '60px', borderRadius: '50%' }}>
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -228,15 +259,16 @@ export const Contact = () => {
               </div>
               <h3 style={{ fontSize: '1.6rem', color: 'var(--textTitle)', margin: '8px 0 4px' }}>Message Sent!</h3>
               <p style={{ color: 'var(--textBody)', maxWidth: '400px', lineHeight: 1.6 }}>
-                Thank you for reaching out. I’ve received your message and will get back to you shortly.
+                Thank you for reaching out. Your message has been delivered to <strong>sanskritig007@gmail.com</strong>, and I’ll get back to you shortly.
               </p>
-              <a
-                href="/"
+              <button
+                type="button"
+                onClick={() => setSent(false)}
                 className={styles.submitBtn}
-                style={{ width: 'auto', padding: '10px 24px', textDecoration: 'none', marginTop: '12px' }}
+                style={{ width: 'auto', padding: '10px 24px', textDecoration: 'none', marginTop: '12px', cursor: 'pointer' }}
               >
-                Back to Portfolio
-              </a>
+                Send Another Message
+              </button>
             </div>
           ) : (
             <>
@@ -249,7 +281,7 @@ export const Contact = () => {
                 <h3>Send a Direct Message</h3>
               </div>
 
-              <Form method="post" className={styles.formBody}>
+              <form onSubmit={handleSubmit} className={styles.formBody}>
                 {/* Honeypot hidden input */}
                 <input type="text" name="botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
@@ -290,9 +322,9 @@ export const Contact = () => {
                   ></textarea>
                 </div>
 
-                {actionData?.errors && (
+                {errorMessage && (
                   <div style={{ color: '#ff4d4f', fontSize: '0.88rem', fontWeight: 600 }}>
-                    {actionData.errors.email || actionData.errors.message}
+                    {errorMessage}
                   </div>
                 )}
 
@@ -304,7 +336,7 @@ export const Contact = () => {
                   <Icon icon="send" size={18} />
                   <span>{sending ? 'Sending...' : 'Send Message'}</span>
                 </button>
-              </Form>
+              </form>
             </>
           )}
         </div>
