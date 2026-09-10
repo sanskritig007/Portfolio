@@ -1,9 +1,6 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
+import finpilotTextureLarge from '~/assets/finpilot-app-large.jpg';
+import finpilotTexturePlaceholder from '~/assets/finpilot-app-placeholder.jpg';
+import finpilotTexture from '~/assets/finpilot-app.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
@@ -52,10 +49,11 @@ export const Home = () => {
   const intro = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
+  const projectThree = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, details].filter(
+    const sections = [intro, projectOne, projectTwo, projectThree, details].filter(
       section => section && section.current
     );
 
@@ -140,6 +138,26 @@ export const Home = () => {
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
               placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={3}
+        title="Intelligent personal finance studio"
+        description="Engineering FinPilot AI — a privacy-first personal finance operating system with deterministic double-entry calculations, autonomous subscription discovery, purchase stress-testing, and Gemini 2.5 Flash advisory."
+        buttonText="View code"
+        buttonLink="https://github.com/sanskritig007/Finpilot"
+        model={{
+          type: 'laptop',
+          alt: 'FinPilot AI intelligent personal finance operating system',
+          textures: [
+            {
+              srcSet: `${finpilotTexture} 800w, ${finpilotTextureLarge} 1920w`,
+              placeholder: finpilotTexturePlaceholder,
             },
           ],
         }}
