@@ -159,7 +159,11 @@
     "future": {
       "v3_fetcherPersist": false,
       "v3_relativeSplatPath": false,
-      "v3_throwAbortReason": false
+      "v3_throwAbortReason": false,
+      "v3_routeConfig": false,
+      "v3_singleFetch": false,
+      "v3_lazyRouteDiscovery": false,
+      "unstable_optimizeDeps": false
     },
     "manifest": false,
     "publicPath": "/",
@@ -253,5 +257,10 @@
     "serverBuildFile": "index.js",
     "serverModuleFormat": "esm",
     "ssr": true
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
   }
 }
