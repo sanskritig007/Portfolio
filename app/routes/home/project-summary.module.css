@@ -102,11 +102,36 @@
       --width: 180%;
     }
 
+    @media (--mediaLaptop) {
+      --width: 160%;
+    }
+
     @media (--mediaTablet) {
       --width: 140%;
 
       top: 10%;
       left: 0;
+    }
+
+    .summary[data-alternate='true'] & {
+      left: -28%;
+      --width: 148%;
+
+      @media (--mediaDesktop) {
+        left: -28%;
+        --width: 148%;
+      }
+
+      @media (--mediaLaptop) {
+        left: -22%;
+        --width: 138%;
+      }
+
+      @media (--mediaTablet) {
+        --width: 140%;
+        top: 10%;
+        left: 0;
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/favicon.svg" width="50" alt="Sanskriti Goswami Logo" />
+  <img src="public/favicon.svg" width="60" alt="Sanskriti Goswami Logo" />
 </p>
 <h1 align="center">Sanskriti Goswami — 3D Portfolio</h1>
 

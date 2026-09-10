@@ -10,16 +10,15 @@ export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => 
     <svg
       aria-hidden
       className={classes(styles.monogram, className)}
-      width="44"
-      height="30"
-      viewBox="0 0 44 30"
+      width="46"
+      height="28"
+      viewBox="0 0 46 28"
       ref={ref}
       {...props}
     >
       <defs>
         <clipPath id={clipId}>
-          {/* Custom geometric SG monogram */}
-          <path d="M15 2H4a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h8a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2v-4h9v-3H4a4 4 0 0 1-4-4V5a4 4 0 0 1 4-4h11v4Zm27 0H26a4 4 0 0 0-4 4v17a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4v-9H33v4h9v5H26a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16V2Z" />
+          <path d="M19.5 0H5A5 5 0 0 0 0 5v4.5A5 5 0 0 0 5 14.5h9.5A1.5 1.5 0 0 1 16 16v7a1.5 1.5 0 0 1-1.5 1.5H0V28h14.5a5 5 0 0 0 5-5v-7a5 5 0 0 0-5-5H5A1.5 1.5 0 0 1 3.5 9.5V5A1.5 1.5 0 0 1 5 3.5h14.5V0Zm26 0H30A5 5 0 0 0 25 5v18a5 5 0 0 0 5 5h11a5 5 0 0 0 5-5V12.5H35V16h7.5v7a1.5 1.5 0 0 1-1.5 1.5H30A1.5 1.5 0 0 1 28.5 23V5A1.5 1.5 0 0 1 30 3.5h15.5V0Z" />
         </clipPath>
       </defs>
       <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />

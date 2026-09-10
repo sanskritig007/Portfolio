@@ -149,7 +149,7 @@ export const Contact = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/sanskriti-goswami"
+                href="https://www.linkedin.com/in/sanskriti-goswami-a5b901361/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialPill}

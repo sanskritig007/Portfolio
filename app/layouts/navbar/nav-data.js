@@ -18,13 +18,8 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/sanskriti-goswami',
+    url: 'https://www.linkedin.com/in/sanskriti-goswami-a5b901361/',
     icon: 'linkedin',
-  },
-  {
-    label: 'Figma',
-    url: `https://www.figma.com/${config.figma}`,
-    icon: 'figma',
   },
   {
     label: 'Github',
