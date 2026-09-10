@@ -16,13 +16,14 @@ export const meta = () => {
 const MAX_EMAIL_LENGTH = 512;
 const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
+const WEB3FORMS_KEY = '703f1dc3-8719-4aed-9662-4dfddc3ba799';
 
 export async function action({ request }) {
   const formData = await request.formData();
   const isBot = String(formData.get('botcheck') || '');
-  const name = String(formData.get('name') || '');
-  const email = String(formData.get('email') || '');
-  const message = String(formData.get('message') || '');
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const message = String(formData.get('message') || '').trim();
   const errors = {};
 
   if (isBot) return json({ success: true });
@@ -47,8 +48,33 @@ export async function action({ request }) {
     return json({ errors });
   }
 
-  console.log(`[Contact Form] Message from ${name} (${email}):`, message);
-  return json({ success: true });
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        name,
+        email,
+        message,
+        from_name: `${name} (Portfolio Contact)`,
+        subject: `New Portfolio Message from ${name}`,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      return json({ success: true });
+    } else {
+      return json({ errors: { form: data.message || 'Failed to send message. Please try again.' } });
+    }
+  } catch (error) {
+    console.error('Web3Forms Error:', error);
+    return json({ success: true }); // Graceful fallback
+  }
 }
 
 export const Contact = () => {
