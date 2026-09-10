@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanskriti Goswami | Developer + Designer</title>
+  <meta name="description" content="Portfolio of Sanskriti Goswami — Full-Stack Developer, AI Engineer, and Creative Technologist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-CbusvXJs.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DyoKrdKi.css">
+</head>
+<body>
+  <!-- Custom Glowing Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Top Right Theme Switcher -->
+  <div class="top-actions">
+    <button id="theme-toggle-btn" class="action-btn" aria-label="Toggle theme">
+      <!-- Icon rendered via JS -->
+    </button>
+  </div>
+
+  <div class="app-layout">
+    <!-- Fixed Left Vertical Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar-nav">
+      <!-- Monogram Brand Logo -->
+      <a href="#intro" class="logo-container" aria-label="Home">
+        <svg class="brand-svg-logo" width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L8.5 25L14 11L19.5 25L26 2" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 2L29.5 25L32 16" stroke="var(--accent-cyan)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Vertical Navigation Links -->
+      <nav class="sidebar-nav">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#details" class="nav-link">Details</a>
+        <a href="#experience" class="nav-link">Articles</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Bottom Social Links -->
+      <div class="sidebar-socials">
+        <!-- Social 1: Twitter / Social -->
+        <a href="https://github.com/sanskritig007" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Social" title="Profile">
+          <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 5c-1 1-2 1.5-3 2a9 9 0 0 1-15 8c3 0 6-1 8-3-3 0-5-2-5-4 1 0 2 0 3-.5C6 7 4 5 4 2c1 1 3 1.5 5 1.5A7 7 0 0 1 17 2a9 9 0 0 0 4-2c-.5 1.5-1.5 2.5-2.5 3 1-.2 2-.5 2.5-1z"/>
+          </svg>
+        </a>
+        <!-- Social 2: Figma / Dribbble -->
+        <a href="https://leetcode.com/sanskritig007" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LeetCode" title="LeetCode">
+          <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+            <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+            <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path>
+            <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+            <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path>
+          </svg>
+        </a>
+        <!-- Social 3: GitHub -->
+        <a href="https://github.com/sanskritig007" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Flow -->
+    <main class="main-content">
+
+      <!-- =========================================================
+           1. HERO SECTION (EXACT HAMISHW.COM LAYOUT & 3D SCULPTURE)
+           ========================================================= -->
+      <section id="intro" class="section hero-section">
+        <!-- 3D Organic Procedural WebGL Canvas -->
+        <div id="hero-canvas-container" class="hero-bg-canvas"></div>
+        
+        <div class="hero-content">
+          <div class="hero-name-label">SANSKRITI GOSWAMI</div>
+
+          <h1 class="hero-headline">
+            <div class="hero-line-top">
+              <span class="hero-text-primary">Designer</span>
+              <span class="hero-line-rule"></span>
+            </div>
+            <div class="hero-line-bottom">
+              <span class="hero-plus-symbol">+</span>
+              <span class="hero-typing-wrapper">
+                <span id="hero-typing-word">Developer</span>
+                <span class="hero-cyan-cursor-block"></span>
+              </span>
+            </div>
+          </h1>
+        </div>
+
+        <!-- Mouse Scroll Indicator -->
+        <div class="scroll-indicator">
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           2. PROJECTS SECTION (3D LAPTOP & HAMISHW.COM LAYOUT)
+           ========================================================= -->
+      <section id="projects" class="section project-section">
+        <!-- Giant Typographic Background Watermark -->
+        <div class="project-watermark">プロジェクト</div>
+
+        <div class="project-grid">
+          <!-- Left: Project Info Details -->
+          <div class="project-details">
+            <div class="project-number-row">
+              <div class="project-cyan-bar"></div>
+              <span class="project-index" id="project-index-num">01</span>
+            </div>
+
+            <h2 class="project-title" id="project-title-label">Designing the future of travel stays</h2>
+
+            <p class="project-description" id="project-desc-label">
+              Designing a next-generation accommodation platform to help travellers discover unique stays with real-time geospatial visualization.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://stayria.onrender.com" id="project-primary-btn" target="_blank" rel="noopener noreferrer" class="btn-cyan-action">
+                <span>View project</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/sanskritig007/Stayria" id="project-github-btn" target="_blank" rel="noopener noreferrer" class="btn-subtle-action">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>Code</span>
+              </a>
+            </div>
+
+            <!-- Project Switch Tabs -->
+            <div class="project-switch-bar">
+              <button class="project-tab-btn active" data-project-idx="0">01 Stayria</button>
+              <button class="project-tab-btn" data-project-idx="1">02 AI PR Reviewer</button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive 3D Laptop Display -->
+          <div class="project-3d-wrapper">
+            <div id="laptop-canvas-container" class="laptop-3d-canvas-container"></div>
+            <div class="laptop-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>Interactive 3D</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           3. DETAILS SECTION
+           ========================================================= -->
+      <section id="details" class="section details-section">
+        <div class="section-header">
+          <div class="project-number-row" style="margin-bottom: 12px;">
+            <div class="project-cyan-bar"></div>
+            <span class="project-index">02</span>
+          </div>
+          <h2 class="section-title">Details & Skills</h2>
+        </div>
+
+        <div class="details-grid">
+          <!-- Left Profile Card -->
+          <div class="glass-panel profile-card">
+            <div class="profile-top-row">
+              <div class="avatar-wrapper">
+                <img src="/assets/avatar.jpg" alt="Sanskriti Goswami" class="avatar-img">
+              </div>
+              <div class="profile-name-block">
+                <h3>Sanskriti Goswami</h3>
+                <p>Software Engineer & Creative Technologist</p>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">📍 Ghaziabad, UP, India</span>
+              </div>
+            </div>
+
+            <p class="profile-bio">
+              Undergraduate engineer in Electronics & Communication at Ajay Kumar Garg Engineering College (2023–2027). Specializing in scalable full-stack web platforms, AI developer tooling, and interactive 3D computing.
+            </p>
+
+            <div class="education-box">
+              <div class="edu-title">Ajay Kumar Garg Engineering College</div>
+              <div class="edu-subtitle">B.Tech — Electronics & Communication Engineering</div>
+              <div class="edu-date">2023 — 2027</div>
+            </div>
+
+            <!-- 3D Skills Orb Container -->
+            <div style="position: relative; width: 100%; height: 180px;">
+              <div id="skills-orb-canvas-container" style="width: 100%; height: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Right Technical Skills Categories -->
+          <div class="skills-container">
+            <div class="glass-panel skills-category-card">
+              <div class="skills-category-title">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>Languages</span>
+              </div>
+              <div class="skills-badge-list" id="skills-languages-list"></div>
+            </div>
+
+            <div class="glass-panel skills-category-card">
+              <div class="skills-category-title">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Web Technologies</span>
+              </div>
+              <div class="skills-badge-list" id="skills-web-list"></div>
+            </div>
+
+            <div class="glass-panel skills-category-card">
+              <div class="skills-category-title">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>Databases</span>
+              </div>
+              <div class="skills-badge-list" id="skills-db-list"></div>
+            </div>
+
+            <div class="glass-panel skills-category-card">
+              <div class="skills-category-title">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <span>Tools & Core CS</span>
+              </div>
+              <div class="skills-badge-list" id="skills-tools-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           4. ARTICLES / EXPERIENCE & LEADERSHIP SECTION
+           ========================================================= -->
+      <section id="experience" class="section experience-section">
+        <div class="section-header">
+          <div class="project-number-row" style="margin-bottom: 12px;">
+            <div class="project-cyan-bar"></div>
+            <span class="project-index">03</span>
+          </div>
+          <h2 class="section-title">Articles & Experience</h2>
+        </div>
+
+        <div class="glass-panel experience-spotlight">
+          <div class="spotlight-header">
+            <div>
+              <h3 class="spotlight-role">Open Source Contributor (GSSoC 2025)</h3>
+              <div class="spotlight-org">GirlScript Summer of Code</div>
+            </div>
+            <div class="spotlight-period">May 2025 – Aug 2025</div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+            Merged 5+ production pull requests, optimized 3+ responsive modules using React and modern JS, reducing bug count by 30% and improving performance by 20%.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="glass-panel achievement-card">
+            <div class="achievement-metric">5+ Hackathons</div>
+            <h4 class="achievement-title">Leadership & Events</h4>
+            <p class="achievement-desc">Led 5+ college hackathons and technical events, coordinating teams of 20+ volunteers.</p>
+          </div>
+
+          <div class="glass-panel achievement-card">
+            <div class="achievement-metric">20+ Mentees</div>
+            <h4 class="achievement-title">Peer Mentorship</h4>
+            <p class="achievement-desc">Conducted 10+ peer-learning sessions mentoring 20+ juniors in DSA and web dev.</p>
+          </div>
+
+          <div class="glass-panel achievement-card">
+            <div class="achievement-metric">Top 10 / 200+</div>
+            <h4 class="achievement-title">Competitive Coding</h4>
+            <p class="achievement-desc">Ranked Top 10 in 3 college coding competitions demonstrating strong problem-solving skills.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           5. CONTACT SECTION
+           ========================================================= -->
+      <section id="contact" class="section contact-section">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-header" style="margin-bottom: 20px;">
+              <div class="project-number-row" style="margin-bottom: 12px;">
+                <div class="project-cyan-bar"></div>
+                <span class="project-index">04</span>
+              </div>
+              <h2 class="section-title">Say hello.</h2>
+            </div>
+
+            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+              Interested in collaborating or discussing engineering roles? Send me a message or copy my email below.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-card" id="copy-email-btn" style="cursor: pointer;" title="Click to copy email">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div style="flex: 1;">
+                  <div class="contact-detail-label">Email (Click to copy)</div>
+                  <div class="contact-detail-value">sanskritig007@gmail.com</div>
+                </div>
+                <button class="btn-subtle-action" style="padding: 4px 10px; font-size: 0.78rem;">Copy</button>
+              </div>
+
+              <div class="contact-detail-card">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-detail-label">Phone</div>
+                  <div class="contact-detail-value">+91-7394838587</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-panel contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Hi Sanskriti, I'd like to talk about..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-cyan-action" style="justify-content: center; width: 100%;">
+                <span>Send message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Minimalist Footer -->
+      <footer style="padding: 30px 8%; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.85rem;">
+        <div>© 2026 Sanskriti Goswami.</div>
+        <div>hamishw.com inspired 3D design</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Main JavaScript App Entry -->
+</body>
+</html>
