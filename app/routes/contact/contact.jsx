@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Form, useActionData, useNavigation } from '@remix-run/react';
-import { json } from '@remix-run/cloudflare';
+import { json } from '@remix-run/node';
 import { baseMeta } from '~/utils/meta';
 import { Icon } from '~/components/icon';
 import styles from './contact.module.css';
