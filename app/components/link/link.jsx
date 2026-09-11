@@ -35,8 +35,10 @@ export const Link = forwardRef(
       );
     }
 
+    const { href: _omittedHref, ...routerLinkProps } = linkProps;
+
     return (
-      <RouterLink unstable_viewTransition prefetch="intent" {...linkProps} to={href}>
+      <RouterLink prefetch="intent" {...routerLinkProps} to={href}>
         {children}
       </RouterLink>
     );

@@ -17,7 +17,6 @@ export const Button = forwardRef(({ href, ...rest }, ref) => {
 
   return (
     <ButtonContent
-      unstable_viewTransition
       as={Link}
       prefetch="intent"
       to={href}
@@ -44,6 +43,8 @@ const ButtonContent = forwardRef(
       target,
       href,
       disabled,
+      viewTransition: _vt,
+      unstable_viewTransition: _uvt,
       ...rest
     },
     ref
@@ -51,6 +52,11 @@ const ButtonContent = forwardRef(
     const isExternal = isExternalLink(href);
     const defaultComponent = href ? 'a' : 'button';
     const Component = as || defaultComponent;
+    const isRouterLink = Component === Link;
+
+    const componentProps = isRouterLink
+      ? { ...rest }
+      : { ...rest, href };
 
     return (
       <Component
@@ -59,12 +65,11 @@ const ButtonContent = forwardRef(
         data-icon-only={iconOnly}
         data-secondary={secondary}
         data-icon={icon}
-        href={href}
         rel={rel || isExternal ? 'noopener noreferrer' : undefined}
         target={target || isExternal ? '_blank' : undefined}
         disabled={disabled}
         ref={ref}
-        {...rest}
+        {...componentProps}
       >
         {!!icon && (
           <Icon
