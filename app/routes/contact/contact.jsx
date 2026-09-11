@@ -166,8 +166,9 @@ export const Contact = () => {
                 rel="noopener noreferrer"
                 className={styles.socialPill}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.649 1.837-.649s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.216 5.216 0 0 0-3.75-1.455c-1.377 0-2.754.52-3.805 1.571L3.99 10.74c-2.09 2.102-2.09 5.508 0 7.61l4.332 4.364c1.051 1.051 2.428 1.57 3.805 1.57s2.754-.519 3.805-1.57l2.609-2.636c.514-.514.496-1.365-.039-1.901-.535-.535-1.386-.553-1.9-.038zM20.811 13.01H10.666c-.733 0-1.332.6-1.332 1.333s.599 1.334 1.332 1.334h10.145c.733 0 1.332-.6 1.332-1.334 0-.733-.599-1.333-1.332-1.333z"/>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
                 <div className={styles.socialPillInfo}>
                   <span className={styles.socialPillName}>LeetCode</span>
