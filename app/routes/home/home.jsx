@@ -108,8 +108,8 @@ export const Home = () => {
         index={1}
         title="Designing the future of travel stays"
         description="Engineering Stayria — a next-generation travel platform featuring real-time Mapbox geospatial visualization, Cloudinary media optimization, and hybrid MongoDB & MySQL database architecture."
-        buttonText="View project"
-        buttonLink="https://stayria.onrender.com"
+        buttonText="View code"
+        buttonLink="https://github.com/sanskritig007/stayria"
         model={{
           type: 'laptop',
           alt: 'Stayria luxury travel platform',

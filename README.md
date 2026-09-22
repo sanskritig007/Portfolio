@@ -37,7 +37,7 @@ Personal 3D portfolio and interactive web experience for **Sanskriti Goswami** �
 
 ## 💼 Featured Engineering Projects
 
-### 1. 🏨 [Stayria](https://stayria.onrender.com) — Modern Travel & Accommodation Platform
+### 1. 🏨 [Stayria](https://github.com/sanskritig007/stayria) — Modern Travel & Accommodation Platform
 *Designing the future of luxury travel stays and geospatial property discovery.*
 - **Tech Stack**: Node.js, Express, MongoDB, MySQL, Mapbox GL JS, Cloudinary, EJS.
 - **Key Features**: Real-time geospatial property visualization, secure JWT authentication with role-based access, Cloudinary image transformation pipelines, and hybrid database architecture.
